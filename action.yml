@@ -1,0 +1,15 @@
+name: 'GitBook Build'
+description: 'GitBook Build'
+author: 'wanggh8'
+branding:
+  icon: 'book'
+  color: 'white'
+inputs:
+  github_token:
+    description: 'Github token for this repo'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.github_token }}
